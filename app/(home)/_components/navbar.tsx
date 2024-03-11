@@ -20,7 +20,7 @@ export default function Navbar() {
         className="rounded-lg p-2 hover:bg-stone-200 dark:hover:bg-stone-700"
       >
         <Image
-          src="/PixelFlow-white.svg"
+          src="/pixelflow-white.svg"
           width={150}
           height={110}
           alt="Logo"

@@ -11,7 +11,7 @@ export default function Footer() {
           className="rounded-lg p-2 border border-black hover:border-white"
         >
           <Image
-            src="/PixelFlow-white.svg"
+            src="/pixelflow-white.svg"
             width={150}
             height={110}
             alt="Logo"
