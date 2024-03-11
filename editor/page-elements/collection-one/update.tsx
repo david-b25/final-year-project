@@ -1,0 +1,153 @@
+"use client";
+import { z } from "zod";
+import { SitePage } from "@prisma/client"
+import { PageElementInstance } from "@/editor/page-elements";
+
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+
+import useDesigner from "@/editor/hooks/use-designer";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { Form } from "@/editor/ui/form";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/editor/ui/accordion"
+
+import { Colour } from "@/editor/page-elements/update-fields/colour";
+import { TextAndColour } from "@/editor/page-elements/update-fields/text-and-colour";
+import { TextareaAndColour } from "@/editor/page-elements/update-fields/textarea-and-colour";
+import { DeleteButton } from "@/editor/page-elements/update-fields/delete";
+
+type CustomInstance = PageElementInstance & {
+    extraAttributes: typeof extraAttributes;
+}
+
+const extraAttributes = {
+    backgroundColour: "#FFFFFF",
+  
+    tagline: {
+        text: "Welcome to SiteUp",
+        textColour: "#333333",
+    },
+  
+    title: {
+        text: "Title Copy Goes Here",
+        textColour: "#333333",
+    },
+  
+    paragraph: {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem. Etiam sodales ac felis id interdum.",
+        textColour: "#333333",
+    },
+  }
+
+  const propertiesSchema = z.object({
+
+    backgroundColour: z.string().min(7).max(7),
+
+    tagline: z.object({
+        text: z.string().min(2).max(50),
+        textColour: z.string().min(7).max(7),
+    }).optional(),
+    
+    title: z.object({
+        text: z.string().min(2).max(50),
+        textColour: z.string().min(7).max(7),
+    }).optional(),
+
+    paragraph: z.object({
+        text: z.string().min(2).max(500),
+        textColour: z.string().min(7).max(7),
+    }).optional(),
+    
+});
+
+type propertiesFormSchemaType = z.infer<typeof propertiesSchema>;
+export function CollectionOneForm({sitePages, elementInstance}: {sitePages: SitePage[],elementInstance: PageElementInstance;}){
+    const element = elementInstance as CustomInstance;
+    const { updateElement, removeElement } = useDesigner();
+    const form = useForm<propertiesFormSchemaType>({
+        resolver: zodResolver(propertiesSchema),
+        mode: "onBlur",
+        defaultValues: {
+            backgroundColour: element.extraAttributes.backgroundColour,
+            tagline: element.extraAttributes.tagline,
+            title: element.extraAttributes.title,
+            paragraph: element.extraAttributes.paragraph,
+        }
+    });
+    
+    useEffect(() => {
+        form.reset(element.extraAttributes)
+    }, [element, form]);
+
+    function applyChanges(values: propertiesFormSchemaType){
+        const { backgroundColour, tagline, title, paragraph } = values;
+        updateElement(element.id, {
+            ...element,
+            extraAttributes:{
+                backgroundColour,
+                tagline,
+                title,
+                paragraph,
+            }
+        })
+    }
+
+    return (
+        <div>
+            <Accordion type="single" collapsible className="w-full pb-4  text-stone-600 text-xs">
+                <Form {...form}>
+                    <form
+                        onBlur={form.handleSubmit(applyChanges)}
+                        onSubmit={(e) => {
+                        e.preventDefault();
+                        }}
+                    >
+                    <AccordionItem value="background-test">
+                    <AccordionTrigger>Background Colour</AccordionTrigger>
+                    <AccordionContent className="px-2 grid grid-cols-1 md:grid-cols-1 gap-2 place-items-center">
+                            <Colour 
+                                label="Background Colour"
+                                control={form.control}
+                                name="backgroundColour"
+                                description="This is the main background colour for the navbar section of the page."
+                            />
+                    </AccordionContent>
+                    </AccordionItem>
+
+                    
+                    <AccordionItem value="textFields">
+                    <AccordionTrigger>Text Fields</AccordionTrigger>
+                    <AccordionContent className="px-2 grid grid-cols-1 md:grid-cols-1 gap-2 place-items-center">
+                        <TextAndColour 
+                            label="Tagline"
+                            control={form.control}
+                            text="tagline.text"
+                            textColour="tagline.textColour"
+                        />
+
+                        <TextAndColour 
+                            label="Title"
+                            control={form.control}
+                            text="title.text"
+                            textColour="title.textColour"
+                        />
+
+                        <TextareaAndColour 
+                            label="Title"
+                            control={form.control}
+                            text="paragraph.text"
+                            textColour="paragraph.textColour"
+                        />
+
+                    </AccordionContent>
+                    </AccordionItem>
+
+            </form>
+        </Form>
+        </Accordion>
+
+        <DeleteButton element={element.id}/>
+    </div>
+    );
+}
