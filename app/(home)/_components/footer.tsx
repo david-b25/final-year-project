@@ -11,8 +11,8 @@ export default function Footer() {
           className="rounded-lg p-2 border border-black hover:border-white"
         >
           <Image
-            src="/logo-white.svg"
-            width={110}
+            src="/PixelFlow-white.svg"
+            width={150}
             height={110}
             alt="Logo"
             className="dark:scale-110 dark:rounded-full dark:border dark:border-stone-400"
@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="flex-row items-center justify-center pb-8 px-6">
         <div className="w-full h-[1px] mb-4 bg-white bg-opacity-40"></div>
         <p className="font-cal text-xs text-white text-center">
-          © Copyright 2024 Graft Marketing. All Rights Reserved.
+          © Copyright 2024 PixelFlow. All Rights Reserved.
         </p>
       </div>
     </div>

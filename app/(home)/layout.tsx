@@ -1,5 +1,5 @@
 import Navbar from "./_components/navbar";
-import CanvasComponent from './canvas';
+import Canvas from "./canvas";
 
 export default function LandingPageLayout({
   children,
@@ -9,10 +9,10 @@ export default function LandingPageLayout({
   return (
       <div>
         <Navbar />
-        <main className="h-full pt-40">
+        <main className="h-full">
           {children}
         </main>
-        <CanvasComponent />
+        <Canvas/>
       </div>
    );
 }
