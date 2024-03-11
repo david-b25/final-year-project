@@ -1,5 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs'
-
+import { dark } from '@clerk/themes'
 import "@/styles/globals.css";
 import { cal, inter } from "@/styles/fonts";
 import { Analytics } from "@vercel/analytics/react";
@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{ baseTheme: dark }}>
       <html lang="en" suppressHydrationWarning>
         <body className={cn(cal.variable, inter.variable)}>
           <Providers>

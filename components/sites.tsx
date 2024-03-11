@@ -26,16 +26,17 @@ export default async function Sites({ limit }: { limit?: number }) {
       ))}
     </div>
   ) : (
-    <div className="mt-30 border border-border rounded-lg flex flex-col items-center space-x-4">
-      <h1 className="mt-20 font-cal text-4xl">No Sites Yet</h1>
+    <div className="mt-30 border border-border flex flex-col items-center space-x-4">
+      <h1 className="mt-20 font-cal text-4xl">No Websites Yet</h1>
       <Image
         alt="missing site"
-        src="/designer-placeholder.svg"
+        src="/pixelflow-no-website.svg"
         width={400}
         height={400}
+        className="mt-20 mb-20"
       />
       <p className="mb-30 text-lg text-stone-500">
-        You do not have any sites yet. Create one to get started.
+        You do not have any websites yet. Create one to get started.
       </p>
     </div>
   );

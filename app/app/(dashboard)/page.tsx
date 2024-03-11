@@ -5,11 +5,11 @@ import CreateSite from "@/components/create-site";
 
 export default function Overview() {
   return (
-    <div className="flex max-w-screen-xl flex-col space-y-12 p-8">
+    <div className="flex flex-col space-y-12 p-8">
       <div className="flex flex-col space-y-6">
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full border-b border-stone-200 pb-4">
           <h1 className="font-cal text-3xl font-bold dark:text-white">
-            All Sites
+            All Websites
           </h1>
           <div className="mr-4 md:mr-0">
             <Suspense fallback={null}>
