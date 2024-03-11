@@ -14,7 +14,7 @@ export default function LandingPage() {
           </h1>
           <div className="my-16"></div>
           <h3 className="font-cal text-white text-base sm:text-xl md:text-2xl font-medium">
-            PixelFlow AI just Text to Wesbite, it's Text to Functional Website.
+            PixelFlow AI just Text to Wesbite, it is Text to Functional Website.
           </h3>
           <div className="flex items-center justify-center">
             <Link
