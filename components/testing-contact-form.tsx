@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { createFormSubmission } from "@/lib/actions";
+import { createFormSubmission } from "@/lib/actions/contact";
 import va from "@vercel/analytics";
 import { useFormStatus } from "react-dom";
 import { cn } from "@/lib/utils";

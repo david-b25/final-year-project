@@ -1,5 +1,4 @@
 import Navbar from "./_components/navbar";
-import Canvas from "./canvas";
 
 export default function LandingPageLayout({
   children,
@@ -12,7 +11,6 @@ export default function LandingPageLayout({
         <main className="h-full">
           {children}
         </main>
-        <Canvas/>
       </div>
    );
 }

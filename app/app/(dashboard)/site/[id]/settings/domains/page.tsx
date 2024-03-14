@@ -1,6 +1,6 @@
 import prisma from "@/lib/prisma";
 import Form from "@/components/form";
-import { updateSite } from "@/lib/actions";
+import { updateSite } from "@/lib/actions/site";
 import DeleteCustomDomainForm from "@/components/form/delete-custom-domain-form";
 import DomainConfiguration from "@/components/form/custom-domain-configuration";
 

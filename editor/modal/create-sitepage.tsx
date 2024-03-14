@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "sonner";
-import { createSitePage } from "@/lib/actions";
+import { createSitePage } from "@/lib/actions/sitepage";
 import { useParams, useRouter } from "next/navigation";
 import { useFormStatus } from "react-dom";
 import { cn } from "@/lib/utils";

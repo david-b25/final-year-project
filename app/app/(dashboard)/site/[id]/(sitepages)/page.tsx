@@ -2,7 +2,6 @@ import { auth } from "@clerk/nextjs";
 import prisma from "@/lib/prisma";
 import { notFound, redirect } from "next/navigation";
 import RenderSitePages from "@/components/sitepages";
-import { PageType } from "@prisma/client";
 
 export default async function SiteOverview({
   params,

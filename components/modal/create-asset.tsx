@@ -1,4 +1,4 @@
-import { createAsset } from "@/lib/actions";
+import { createAsset } from "@/lib/actions/assets";
 import UploadForm from "@/components/form";
 
 export default function CreateAssetModal() {

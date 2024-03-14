@@ -16,7 +16,6 @@ import { DndContext, MouseSensor, TouchSensor, useSensor, useSensors } from "@dn
 import DragOverlayWrapper from "@/editor/drag-overlay-wrapper";
 import useDesigner from "@/editor/hooks/use-designer";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 
 import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/editor/ui/tabs";

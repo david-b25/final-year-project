@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { SitePage } from "@prisma/client";
-import { updateSitePageMetadata } from "@/lib/actions";
+import { updateSitePageMetadata } from "@/lib/actions/sitepage";
 import { cn } from "@/lib/utils";
 import LoadingDots from "@/components/icons/loading-dots";
 import { toast } from "sonner";

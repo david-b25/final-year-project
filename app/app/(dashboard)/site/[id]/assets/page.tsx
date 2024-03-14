@@ -1,8 +1,6 @@
 import { auth } from "@clerk/nextjs"
 import prisma from "@/lib/prisma";
 import { notFound, redirect } from "next/navigation";
-import Form from "@/components/form";
-import { createAsset } from "@/lib/actions";
 import Assets from "@/components/assets";
 import CreateAsset from "@/components/create-asset";
 

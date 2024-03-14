@@ -1,9 +1,7 @@
 import React from "react";
-import { PageElement } from "@/editor/page-elements";
 import useDesigner from "@/editor/hooks/use-designer";
 import { PageElements } from "@/editor/page-elements";
 import { ChevronRight } from "lucide-react";
-import { Button } from "@/editor/ui/button";
 import { SitePage } from "@prisma/client";
 
 

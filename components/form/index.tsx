@@ -6,8 +6,6 @@ import { useUser } from "@clerk/nextjs";
 import { useParams, useRouter } from "next/navigation";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
-//import DomainStatus from "./domain-status";
-//import DomainConfiguration from "./domain-configuration";
 import Uploader from "./uploader";
 import va from "@vercel/analytics";
 

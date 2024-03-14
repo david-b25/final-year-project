@@ -1,5 +1,5 @@
 
-import { ReactNode, Suspense } from "react";
+import { ReactNode } from "react";
 import { auth } from "@clerk/nextjs";
 import { redirect, notFound } from "next/navigation";
 import prisma from "@/lib/prisma";

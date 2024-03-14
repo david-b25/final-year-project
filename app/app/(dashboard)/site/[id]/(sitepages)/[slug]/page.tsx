@@ -1,6 +1,5 @@
 import { auth } from "@clerk/nextjs"
 import { redirect, notFound } from "next/navigation";
-import { Site, SitePage, PageType } from "@prisma/client";
 import prisma from "@/lib/prisma";
 import RenderSitePages from "@/components/sitepages";
 

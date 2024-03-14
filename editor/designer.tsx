@@ -4,15 +4,13 @@ import NavbarLeft from "./nav-left";
 import { PageElementInstance, PageElements, ElementsType } from "./page-elements";
 import { cn } from "@/lib/utils";
 import useDesigner from "@/editor/hooks/use-designer";
-import { DragEndEvent, useDndMonitor, useDraggable, useDroppable } from "@dnd-kit/core";
+import { useDndMonitor, useDraggable, useDroppable } from "@dnd-kit/core";
 import { idGenerator } from "@/lib/utils";
 import { useState } from "react";
-import { Button } from "@/editor/ui/button";
 import DesignerPlaceholder from "@/editor/designer-placeholder";
 import NavbarRight from "./nav-right";
 import { toast } from "sonner";
 import { Site, SitePage } from "@prisma/client";
-import { Trash2, PencilRuler } from "lucide-react";
 
 
 export default function Designer({site, sitePage, sitePages, displaySize}: {site: Site, sitePage: SitePage, sitePages: SitePage[], displaySize: "large" | "medium" | "small"}){

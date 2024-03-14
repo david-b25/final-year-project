@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { useParams, useRouter } from "next/navigation";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
-import { deleteSitePage } from "@/lib/actions";
+import { deleteSitePage } from "@/lib/actions/sitepage";
 import va from "@vercel/analytics";
 
 export default function DeleteSitePage({ sitePageName }: { sitePageName: string }) {

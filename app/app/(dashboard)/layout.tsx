@@ -1,7 +1,5 @@
 import { ReactNode, Suspense } from "react";
 import { UserButton } from "@clerk/nextjs";
-import { UserProfile } from "@clerk/nextjs";
-import Nav from "@/components/nav";
 import Navbar from "@/components/navbar";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {

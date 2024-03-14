@@ -1,8 +1,7 @@
 
 import prisma from "@/lib/prisma";
-import Image from "next/image";
 import { Site, ContactForm } from "@prisma/client";
-import { Submission, columns } from "./columns"
+import { columns } from "./columns"
 import { DataTable } from "./data-table"
 
 export default async function RenderContactFormData({

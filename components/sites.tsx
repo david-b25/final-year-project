@@ -29,7 +29,7 @@ export default async function Sites({ limit }: { limit?: number }) {
     <div className="mt-30 border border-border flex flex-col items-center space-x-4">
       <h1 className="mt-20 font-cal text-4xl">No Websites Yet</h1>
       <Image
-        alt="missing site"
+        alt="No Websites Yet"
         src="/pixelflow-no-website.svg"
         width={400}
         height={400}

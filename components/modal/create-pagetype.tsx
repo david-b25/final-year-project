@@ -1,7 +1,6 @@
 "use client";
 
 import { toast } from "sonner";
-import { createSitePage } from "@/lib/actions";
 import { useParams, useRouter } from "next/navigation";
 import { useFormStatus } from "react-dom";
 import { cn } from "@/lib/utils";
@@ -9,7 +8,7 @@ import LoadingDots from "@/components/icons/loading-dots";
 import { useModal } from "./provider";
 import va from "@vercel/analytics";
 import { useEffect, useState } from "react";
-import { createPageType } from "@/lib/actions";
+import { createPageType } from "@/lib/actions/sitepage";
 
 export default function CreateSitePageModal() {
   const router = useRouter();

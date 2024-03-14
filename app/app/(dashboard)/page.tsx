@@ -3,12 +3,12 @@ import Sites from "@/components/sites";
 import PlaceholderCard from "@/components/placeholder-card";
 import CreateSite from "@/components/create-site";
 
-export default function Overview() {
+export default function Dashboard() {
   return (
     <div className="flex flex-col space-y-12 p-8">
       <div className="flex flex-col space-y-6">
         <div className="flex items-center justify-between w-full border-b border-stone-200 pb-4">
-          <h1 className="font-cal text-3xl font-bold dark:text-white">
+          <h1 className="font-cal text-3xl font-bold">
             All Websites
           </h1>
           <div className="mr-4 md:mr-0">

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { AlertCircle, XCircle, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { statusCustomDomain } from '@/lib/actions';
+import { statusCustomDomain } from '@/lib/actions/domains';
 
 export const InlineSnippet = ({
   className,

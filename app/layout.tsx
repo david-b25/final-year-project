@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 
 
 const title =
-  "SiteUp – The all-in-one starter kit for building multi-tenant applications.";
+  "PixelFlow – The all-in-one text to website SaaS application.";
 const description =
-  "SiteUp is a full-stack Next.js app with multi-tenancy and custom domain support. Built with Next.js App Router, Vercel Postgres and the Vercel Domains API.";
+  "PixelFlow is a full-stack Next.js app with website building and custom domain support. Built with Next.js App Router and Vercel Postgres.";
 const image = "https://vercel.pub/thumbnail.png";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title,
     description,
     images: [image],
-    creator: "@vercel",
+    creator: "@pixelflow",
   },
   metadataBase: new URL("https://vercel.pub"),
 };

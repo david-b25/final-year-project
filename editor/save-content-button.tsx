@@ -1,10 +1,10 @@
 import React, { useTransition } from "react";
 import { Button } from "@/editor/ui/button";
 import { UploadCloud } from "lucide-react";
-import { UpdateSitePageSavedContent, UpdateSiteSavedNavbar, UpdateSiteSavedFooter } from "@/lib/actions";
+import { UpdateSiteSavedNavbar, UpdateSiteSavedFooter } from "@/lib/actions/site";
 import { toast } from "sonner"; 
 import { useEffect } from "react";
-import { getSitePageSavedContent } from "@/lib/actions";
+import { UpdateSitePageSavedContent, getSitePageSavedContent } from "@/lib/actions/sitepage";
 import { Site, SitePage } from "@prisma/client";
 import useDesigner from "@/editor/hooks/use-designer";
 

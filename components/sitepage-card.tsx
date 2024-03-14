@@ -1,7 +1,6 @@
 import BlurImage from "@/components/blur-image";
 import { placeholderBlurhash, random } from "@/lib/utils";
 import { SitePage, Site } from "@prisma/client";
-import { BarChart, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Home } from "lucide-react";
 

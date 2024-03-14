@@ -1,13 +1,12 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
+
 import { UserButton } from "@clerk/nextjs";
 import { Settings, Paintbrush, PanelsTopLeft, UserSearch, Image as ImageIcon } from "lucide-react";
 import { useState } from "react";
 import { PageElements } from "./page-elements";
 import useDesigner from "@/editor/hooks/use-designer";
 
-import { updateSitePageMetadata } from "@/lib/actions"
+import { updateSitePageMetadata } from "@/lib/actions/sitepage"
 import DeleteSitePage from "@/components/form/delete-sitepage";
 import Form from "@/components/form";
 import { cn } from "@/lib/utils";

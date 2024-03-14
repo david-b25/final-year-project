@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import CreateSitePageButton from "./create-sitepage-button";
 import CreateSitePageModal from "@/editor/modal/create-sitepage";
 import { notFound } from "next/navigation";
-import { Check, ChevronsUpDown, PlusCircle, ChevronRight, File } from "lucide-react"
+import {  ChevronsUpDown, ChevronRight, File } from "lucide-react"
 
 import { Button } from "@/editor/ui/button"
 

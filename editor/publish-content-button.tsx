@@ -1,8 +1,8 @@
 import React, { useTransition } from "react";
 import { Button } from "@/editor/ui/button";
-import { UpdateSitePagePublishedContent } from "@/lib/actions";
+import { UpdateSitePagePublishedContent } from "@/lib/actions/sitepage";
 import { toast } from "sonner"; 
-import { getSitePageSavedContent, getSitePagePublishedContent } from "@/lib/actions";
+import { getSitePageSavedContent, getSitePagePublishedContent } from "@/lib/actions/sitepage";
 import { SitePage } from "@prisma/client";
 import { notFound } from "next/navigation";
 

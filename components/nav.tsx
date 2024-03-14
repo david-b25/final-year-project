@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   ArrowLeft,
-  Globe,
   Layout,
   LayoutDashboard,
   Menu,

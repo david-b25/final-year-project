@@ -1,7 +1,7 @@
 "use client"
 
 import { useTransition } from "react";
-import { updateSite } from "@/lib/actions";
+import { updateSite } from "@/lib/actions/site";
 import { cn } from "@/lib/utils";
 import LoadingDots from "@/components/icons/loading-dots";
 import { Site } from "@prisma/client";

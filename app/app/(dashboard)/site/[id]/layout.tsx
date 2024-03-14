@@ -1,7 +1,4 @@
-import { ReactNode, Suspense } from "react";
-import Nav from "@/components/nav";
-import { UserButton } from "@clerk/nextjs";
-
+import { ReactNode } from "react";
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
   return (
