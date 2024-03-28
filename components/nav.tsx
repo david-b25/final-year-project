@@ -110,7 +110,7 @@ export default function Nav({ children }: { children: ReactNode }) {
               />
             </Link>
           </div>
-          <div className="grid gap-1">
+          <div className="grid gap-1 overflow-x-auto whitespace-nowrap">
             {tabs.map(({ name, href, isActive, icon }) => (
               <Link
                 key={name}

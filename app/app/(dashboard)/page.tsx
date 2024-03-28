@@ -1,9 +1,13 @@
+
 import { Suspense } from "react";
 import Sites from "@/components/sites";
 import PlaceholderCard from "@/components/placeholder-card";
 import CreateSite from "@/components/create-site";
 
+import { generate } from "@/lib/actions/generate/generate";
+
 export default function Dashboard() {
+
   return (
     <div className="flex flex-col space-y-12 p-8">
       <div className="flex flex-col space-y-6">

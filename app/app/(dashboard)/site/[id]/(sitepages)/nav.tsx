@@ -6,7 +6,7 @@ import { useParams, useSelectedLayoutSegment } from "next/navigation";
 import { PageType } from "@prisma/client";
 import CreatePageType from "@/components/create-pagetype";
 
-export default function SiteSettingsNav({pageTypes}: {pageTypes: PageType[]}) {
+export default function SitePageTypesNav({pageTypes}: {pageTypes: PageType[]}) {
   const { id } = useParams() as { id?: string };
   const segment = useSelectedLayoutSegment();
 

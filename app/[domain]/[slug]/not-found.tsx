@@ -10,7 +10,7 @@ export default async function NotFound() {
   const data = await getSiteData(domain as string);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mt-10 mb-10">
       <h1 className="font-cal text-4xl">{data ? `${data.name}: ` : ""}404</h1>
       <Image
         alt="missing site"

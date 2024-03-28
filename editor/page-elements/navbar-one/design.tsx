@@ -58,9 +58,9 @@ export function Design({site, elementInstance}: {site: Site, elementInstance: Pa
                           <Link href="/">
                               <Image
                                   alt={site.name || ""}
-                                  height={100}
+                                  height={400}
                                   src={site.logo || ""}
-                                  width={100}
+                                  width={300}
                               />
                           </Link>
                       </div>

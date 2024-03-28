@@ -4,7 +4,7 @@ import CreateSiteButton from "./create-site-button";
 import CreateSiteModal from "./modal/create-site";
 
 
-export default async function OverviewSitesCTA() {
+export default async function CreateSite() {
   const { userId } = auth();
   if (!userId) {
     redirect("/sign-in");

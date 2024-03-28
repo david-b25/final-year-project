@@ -4,7 +4,7 @@ import { useState, useCallback, useMemo, ChangeEvent } from 'react'
 import { toast } from "sonner";
 import LoadingDots from '@/components/icons/loading-dots'
 import { PutBlobResult } from '@vercel/blob'
-import { createAssetModel } from '@/lib/actions'
+import { createAssetModel } from '@/lib/actions/assets'
 import { useParams } from 'next/navigation'
 
 interface UploaderProps {

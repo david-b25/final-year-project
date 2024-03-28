@@ -55,9 +55,9 @@ export function Render({site, elementInstance}: {site: Site, elementInstance: Pa
                             <Link href="/">
                                 <Image
                                     alt={site.name || ""}
-                                    height={100}
+                                    height={300}
                                     src={site.logo || ""}
-                                    width={100}
+                                    width={300}
                                 />
                             </Link>
                         </div>
@@ -78,7 +78,7 @@ export function Render({site, elementInstance}: {site: Site, elementInstance: Pa
                                 </ul>
                             </nav> 
                             <div className="flex items-center gap-4">
-                                <div className="md:flex md:gap-4">
+                                <div className="hidden md:flex md:gap-4">
                                     <Link
                                         style={{ backgroundColor: button.backgroundColour, color: button.textColour }}
                                         className={`inline-block text-base font-title font-medium px-12 py-3  ${radiusMapper[site.buttonRadius]}`}

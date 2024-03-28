@@ -77,7 +77,7 @@ export default function Navbar({ children }: { children: ReactNode }) {
 
   return (
     <div className={cn(
-      "z-50 bg-black dark:bg-[#1F1F1F] relative top-0 flex items-center w-full p-6",
+      "z-10 bg-black dark:bg-[#1F1F1F] relative top-0 flex items-center w-full p-6",
       scrolled && "bg-black"
     )}>
       <Link

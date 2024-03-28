@@ -10,8 +10,8 @@ import { Separator } from "@/editor/ui/separator";
 import { Link as LinkIcon } from "lucide-react"
 import { idGenerator } from '@/lib/utils';
 
-
 export function Links({control, name, sitePages}: {control: any, name: string, sitePages: SitePage[]}) {
+    
 
     const { fields, append, remove} = useFieldArray({
         name: name,

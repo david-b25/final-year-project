@@ -78,6 +78,7 @@ export default async function SiteLayout({
   if(!data.name) {
     notFound();
   }
+  
   return (
     <div className={`${fontMapper[data.font]}`}>
 

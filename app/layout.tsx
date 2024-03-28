@@ -44,7 +44,6 @@ export default function RootLayout({
         <body className={cn(cal.variable, inter.variable)}>
           <Providers>
             {children}
-            <Analytics />
           </Providers>
         </body>
       </html>

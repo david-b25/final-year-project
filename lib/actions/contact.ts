@@ -80,6 +80,7 @@ export const createContactForm = withSiteAuth(async (formData: FormData, site: S
     return response;
   });
   
+  
   async function sendEmail({email}: {email: string}){
     const resend = new Resend(process.env.RESEND_API_KEY);
     

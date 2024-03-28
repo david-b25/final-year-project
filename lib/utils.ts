@@ -61,3 +61,7 @@ export const random = (min: number, max: number) => {
 export function idGenerator() {
   return Math.floor(Math.random() * 10001).toString();
 }
+
+export const validDomainRegex = new RegExp(
+  /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/,
+);

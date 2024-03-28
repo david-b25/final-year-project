@@ -31,7 +31,7 @@ export default async function SitePages({
       id: decodeURIComponent(params.id),
     },
     include: {
-      sitepages: true, // Include sitePages in the query
+      sitepages: true,
     },
   });
 

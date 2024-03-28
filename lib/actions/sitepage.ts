@@ -29,7 +29,7 @@ export const getSiteFromSitePageId = async (sitePageId: string) => {
     return sitePage?.siteId;
   };
   
-  export const createSitePage = withSiteAuth(async (formData: FormData, site: Site) => {
+export const createSitePage = withSiteAuth(async (formData: FormData, site: Site) => {
   
     const { userId } = auth();
     if (!userId) {
@@ -88,7 +88,7 @@ export const getSiteFromSitePageId = async (sitePageId: string) => {
     site.customDomain && (await revalidateTag(`${site.customDomain}-sitePages`));
   
     return response;
-  });
+});
 
 
 
